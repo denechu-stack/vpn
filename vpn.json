@@ -638,5 +638,1043 @@
       }
     ],
     "remarks": "🇫🇮+Белые+списки+ТЕСТ+1"
+  },
+  {
+    "remarks": "🇪🇺 LTE-Авто",
+    "meta": {
+      "serverDescription": "Автовыбор: SMART/LTE-Авто"
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "8.8.8.8",
+        "1.1.1.1"
+      ]
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "socks",
+        "settings": {
+          "udp": true,
+          "auth": "noauth",
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "enabled": true,
+          "routeOnly": false,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ]
+        }
+      },
+      {
+        "tag": "http",
+        "port": 10809,
+        "listen": "127.0.0.1",
+        "protocol": "http",
+        "settings": {
+          "udp": true,
+          "auth": "noauth",
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "enabled": true,
+          "routeOnly": false,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ]
+        }
+      },
+      {
+        "tag": "entry-lte-fallback",
+        "port": 10803,
+        "listen": "127.0.0.1",
+        "protocol": "dokodemo-door",
+        "settings": {
+          "address": "127.0.0.1",
+          "network": "tcp,udp",
+          "port": 0
+        }
+      },
+      {
+        "tag": "entry-smart-fallback",
+        "port": 10804,
+        "listen": "127.0.0.1",
+        "protocol": "dokodemo-door",
+        "settings": {
+          "address": "127.0.0.1",
+          "network": "tcp,udp",
+          "port": 0
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "smart-0------SMART-------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "j3e4po21-11lz3k.95.v-tun.com",
+              "port": 40443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api-maps.yandex.ru",
+            "publicKey": "DG904eM7xGecwV_nhjX73c-7g_fGEv8BgjbeAmTE8Bs",
+            "shortId": "505c94b8c65afb0a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "smart-1------SMART----------2",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "px1t-tab-57fzza.de.deepl-cdn.com",
+              "port": 40443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "deepl.com",
+            "publicKey": "DG904eM7xGecwV_nhjX73c-7g_fGEv8BgjbeAmTE8Bs",
+            "shortId": "505c94b8c65afb0a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "smart-2------SMART-------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "m221kk29-d4zzaq.gb.userapi.dev",
+              "port": 40443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "sun9-45.userapi.com",
+            "publicKey": "DG904eM7xGecwV_nhjX73c-7g_fGEv8BgjbeAmTE8Bs",
+            "shortId": "505c94b8c65afb0a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "smart-3------SMART-----------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "mbt7z5b-wzr5mx.nl.velvetvpn.xyz",
+              "port": 40443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "deepl.com",
+            "publicKey": "wKPAR2t-xoUMbBqRHV7SLvGuR9dwrcH6bTSknyBO0T8",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "smart-4------SMART---------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "px1t-tab-57fzza.de.deepl-cdn.com",
+              "port": 8443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "deepl.com",
+            "publicKey": "DG904eM7xGecwV_nhjX73c-7g_fGEv8BgjbeAmTE8Bs",
+            "shortId": "505c94b8c65afb0a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "smart-5------SMART-------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "z5xa-b1a-azar11.se.deepl-cdn.com",
+              "port": 40443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "deepl.com",
+            "publicKey": "DG904eM7xGecwV_nhjX73c-7g_fGEv8BgjbeAmTE8Bs",
+            "shortId": "505c94b8c65afb0a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "lte-0-------24-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "178.248.238.133",
+              "port": 10065,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "wsSettings": {
+            "path": "/live/stream?module=video-cdn&app_client_id=cc8c59b8-7c86-417b-a522-b0cc29fcc2f8",
+            "headers": {
+              "Host": "stream-1.kinograd.online"
+            }
+          },
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "stream-1.kinograd.online",
+            "fingerprint": "qq",
+            "alpn": [
+              "h3",
+              "h2",
+              "http/1.1"
+            ]
+          }
+        }
+      },
+      {
+        "tag": "lte-1-------12-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "ger8et-jauhfs0-ru.pool-2.yndx-cdn.com",
+              "port": 40443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api-maps.yandex.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "lte-2-------11-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "81.161.98.162",
+              "port": 10065,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "wsSettings": {
+            "path": "/live/stream?module=video-cdn&app_client_id=cc8c59b8-7c86-417b-a522-b0cc29fcc2f8",
+            "headers": {
+              "Host": "kinograd.online"
+            }
+          },
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "kinograd.online",
+            "fingerprint": "qq",
+            "alpn": [
+              "h3",
+              "h2",
+              "http/1.1"
+            ]
+          }
+        }
+      },
+      {
+        "tag": "lte-3-------21-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "z4vv04a1-g8qm9g.ru.y-tun.com",
+              "port": 8443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api-maps.yandex.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "lte-4-------23-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "b3aa11az-k15gg1.ru.y-tun.com",
+              "port": 8443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api-maps.yandex.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "lte-5-------48-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "b0zm1-bz25-xmjm.cdn.mediavitrina.com",
+              "port": 9443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "player.mediavitrina.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "lte-6-------47-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "r0q21mz25-xmjm.ru-a1.y-tun.com",
+              "port": 8443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api-maps.yandex.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "lte-7-------22-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "35a1-1mr4-msk-bbd-5zx.89-1.yndx-cdn.com",
+              "port": 9443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api-maps.yandex.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "lte-8-------46-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "z0211mq18-z3rk.ru-a1.y-tun.com",
+              "port": 40443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api-maps.yandex.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "lte-9-------39-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "ge171301-1624.46.vkproxy.com",
+              "port": 8443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "amedia-vod.cdnvideo.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "ios"
+          }
+        }
+      },
+      {
+        "tag": "lte-10-------40-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "ge171301-1624.46.vkproxy.com",
+              "port": 7443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "amedia-vod.cdnvideo.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "lte-11-------43-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "bd-zv57f16k-141b.msk.v-tun.com",
+              "port": 50445,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "river-5-557.rtbcdn.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "ios"
+          }
+        }
+      },
+      {
+        "tag": "lte-12-------44-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "bd-zv57f16k-141b.msk.v-tun.com",
+              "port": 7443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "amedia-vod.cdnvideo.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "ios"
+          }
+        }
+      },
+      {
+        "tag": "lte-13-------20-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "75f56d06-621c.kz.v-tun.com",
+              "port": 9443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "api-maps.yandex.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "tag": "lte-14-------32-LTE--------------",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "75f56d06-621c.kz.v-tun.com",
+              "port": 7443,
+              "users": [
+                {
+                  "id": "5b98ce88-ef43-4968-990f-53dfbf063cc3",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "amedia-vod.cdnvideo.ru",
+            "publicKey": "ZSzB9TQPGNcCiC0WLmciF5Jc8doJDvdRgbqTi8SCoEM",
+            "shortId": "a1b2c3d4e5f6789a",
+            "spiderX": "/",
+            "fingerprint": "qq"
+          }
+        }
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      },
+      {
+        "protocol": "loopback",
+        "settings": {
+          "inboundTag": "entry-lte-fallback"
+        },
+        "tag": "loop_to_lte"
+      },
+      {
+        "protocol": "loopback",
+        "settings": {
+          "inboundTag": "entry-smart-fallback"
+        },
+        "tag": "loop_to_smart"
+      }
+    ],
+    "observatory": {
+      "enableConcurrency": true,
+      "probeInterval": "2m",
+      "probeUrl": "http://www.gstatic.com/generate_204",
+      "subjectSelector": [
+        "smart-0------SMART-------",
+        "smart-1------SMART----------2",
+        "smart-2------SMART-------",
+        "smart-3------SMART-----------",
+        "smart-4------SMART---------",
+        "smart-5------SMART-------",
+        "lte-0-------24-LTE--------------",
+        "lte-1-------12-LTE--------------",
+        "lte-2-------11-LTE--------------",
+        "lte-3-------21-LTE--------------",
+        "lte-4-------23-LTE--------------",
+        "lte-5-------48-LTE--------------",
+        "lte-6-------47-LTE--------------",
+        "lte-7-------22-LTE--------------",
+        "lte-8-------46-LTE--------------",
+        "lte-9-------39-LTE--------------",
+        "lte-10-------40-LTE--------------",
+        "lte-11-------43-LTE--------------",
+        "lte-12-------44-LTE--------------",
+        "lte-13-------20-LTE--------------",
+        "lte-14-------32-LTE--------------"
+      ]
+    },
+    "routing": {
+      "balancers": [
+        {
+          "tag": "lb_smart",
+          "selector": [
+            "smart-0------SMART-------",
+            "smart-1------SMART----------2",
+            "smart-2------SMART-------",
+            "smart-3------SMART-----------",
+            "smart-4------SMART---------",
+            "smart-5------SMART-------"
+          ],
+          "strategy": {
+            "type": "leastLoad",
+            "settings": {
+              "costs": [
+                {
+                  "match": "smart-0------SMART-------",
+                  "regexp": false,
+                  "value": 0
+                },
+                {
+                  "match": "smart-1------SMART----------2",
+                  "regexp": false,
+                  "value": 1000000000
+                },
+                {
+                  "match": "smart-2------SMART-------",
+                  "regexp": false,
+                  "value": 2000000000
+                },
+                {
+                  "match": "smart-3------SMART-----------",
+                  "regexp": false,
+                  "value": 2147483647
+                },
+                {
+                  "match": "smart-4------SMART---------",
+                  "regexp": false,
+                  "value": 2147483647
+                },
+                {
+                  "match": "smart-5------SMART-------",
+                  "regexp": false,
+                  "value": 2147483647
+                }
+              ],
+              "expected": 1,
+              "maxRTT": "2s"
+            }
+          },
+          "fallbackTag": "loop_to_lte"
+        },
+        {
+          "tag": "lb_lte",
+          "selector": [
+            "lte-0-------24-LTE--------------",
+            "lte-1-------12-LTE--------------",
+            "lte-2-------11-LTE--------------",
+            "lte-3-------21-LTE--------------",
+            "lte-4-------23-LTE--------------",
+            "lte-5-------48-LTE--------------",
+            "lte-6-------47-LTE--------------",
+            "lte-7-------22-LTE--------------",
+            "lte-8-------46-LTE--------------",
+            "lte-9-------39-LTE--------------",
+            "lte-10-------40-LTE--------------",
+            "lte-11-------43-LTE--------------",
+            "lte-12-------44-LTE--------------",
+            "lte-13-------20-LTE--------------",
+            "lte-14-------32-LTE--------------"
+          ],
+          "strategy": {
+            "type": "leastLoad",
+            "settings": {
+              "baselines": [
+                "500ms",
+                "1s"
+              ],
+              "costs": [
+                {
+                  "match": "lte-0-------24-LTE--------------",
+                  "regexp": false,
+                  "value": 2147483647
+                },
+                {
+                  "match": "lte-1-------12-LTE--------------",
+                  "regexp": false,
+                  "value": 2147483647
+                },
+                {
+                  "match": "lte-2-------11-LTE--------------",
+                  "regexp": false,
+                  "value": 2147483647
+                },
+                {
+                  "match": "lte-3-------21-LTE--------------",
+                  "regexp": false,
+                  "value": 2000000000
+                },
+                {
+                  "match": "lte-4-------23-LTE--------------",
+                  "regexp": false,
+                  "value": 2000000000
+                },
+                {
+                  "match": "lte-5-------48-LTE--------------",
+                  "regexp": false,
+                  "value": 2000000000
+                },
+                {
+                  "match": "lte-6-------47-LTE--------------",
+                  "regexp": false,
+                  "value": 2000000000
+                },
+                {
+                  "match": "lte-7-------22-LTE--------------",
+                  "regexp": false,
+                  "value": 2000000000
+                },
+                {
+                  "match": "lte-8-------46-LTE--------------",
+                  "regexp": false,
+                  "value": 2000000000
+                },
+                {
+                  "match": "lte-9-------39-LTE--------------",
+                  "regexp": false,
+                  "value": 2000000000
+                },
+                {
+                  "match": "lte-10-------40-LTE--------------",
+                  "regexp": false,
+                  "value": 2000000000
+                },
+                {
+                  "match": "lte-11-------43-LTE--------------",
+                  "regexp": false,
+                  "value": 2147483647
+                },
+                {
+                  "match": "lte-12-------44-LTE--------------",
+                  "regexp": false,
+                  "value": 2147483647
+                },
+                {
+                  "match": "lte-13-------20-LTE--------------",
+                  "regexp": false,
+                  "value": 2147483647
+                },
+                {
+                  "match": "lte-14-------32-LTE--------------",
+                  "regexp": false,
+                  "value": 2147483647
+                }
+              ],
+              "expected": 1,
+              "maxRTT": "2s"
+            }
+          },
+          "fallbackTag": "loop_to_smart"
+        },
+        {
+          "tag": "lb_smart_fallback",
+          "selector": [
+            "smart-0------SMART-------",
+            "smart-1------SMART----------2",
+            "smart-2------SMART-------",
+            "smart-3------SMART-----------",
+            "smart-4------SMART---------",
+            "smart-5------SMART-------"
+          ],
+          "strategy": {
+            "type": "leastLoad",
+            "settings": {
+              "costs": [
+                {
+                  "match": "smart-0------SMART-------",
+                  "regexp": false,
+                  "value": 0
+                },
+                {
+                  "match": "smart-1------SMART----------2",
+                  "regexp": false,
+                  "value": 1000000000
+                },
+                {
+                  "match": "smart-2------SMART-------",
+                  "regexp": false,
+                  "value": 2000000000
+                },
+                {
+                  "match": "smart-3------SMART-----------",
+                  "regexp": false,
+                  "value": 2147483647
+                },
+                {
+                  "match": "smart-4------SMART---------",
+                  "regexp": false,
+                  "value": 2147483647
+                },
+                {
+                  "match": "smart-5------SMART-------",
+                  "regexp": false,
+                  "value": 2147483647
+                }
+              ],
+              "expected": 1,
+              "maxRTT": "3s"
+            }
+          }
+        }
+      ],
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "type": "field",
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "balancerTag": "lb_smart",
+          "inboundTag": [
+            "socks",
+            "http"
+          ],
+          "network": "tcp,udp"
+        },
+        {
+          "type": "field",
+          "balancerTag": "lb_lte",
+          "inboundTag": [
+            "entry-lte-fallback"
+          ]
+        },
+        {
+          "type": "field",
+          "balancerTag": "lb_smart_fallback",
+          "inboundTag": [
+            "entry-smart-fallback"
+          ]
+        }
+      ]
+    }
   }
 ]
