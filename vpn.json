@@ -1,8 +1,6 @@
 #profile-update-interval: 1
 #profile-title: obLaDeX VPN <3
 #hide-settings: 1
-#subscription-ping-onopen-enabled: 1
-#subscription-pin: true
 [
   {
     "dns": {
